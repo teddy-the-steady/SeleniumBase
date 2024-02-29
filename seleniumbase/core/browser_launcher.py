@@ -31,7 +31,7 @@ from seleniumbase.fixtures import shared_utils
 
 urllib3.disable_warnings()
 # DRIVER_DIR = os.path.dirname(os.path.realpath(drivers.__file__))
-DRIVER_DIR = '/opt/'
+DRIVER_DIR = '/tmp/'
 # Make sure that the SeleniumBase DRIVER_DIR is at the top of the System PATH
 # (Changes to the System PATH with os.environ only last during the test run)
 if not os.environ["PATH"].startswith(DRIVER_DIR):
