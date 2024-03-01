@@ -30,8 +30,7 @@ from seleniumbase.fixtures import constants
 from seleniumbase.fixtures import shared_utils
 
 urllib3.disable_warnings()
-# DRIVER_DIR = os.path.dirname(os.path.realpath(drivers.__file__))
-DRIVER_DIR = '/tmp/'
+DRIVER_DIR = os.path.dirname(os.path.realpath(drivers.__file__))
 # Make sure that the SeleniumBase DRIVER_DIR is at the top of the System PATH
 # (Changes to the System PATH with os.environ only last during the test run)
 if not os.environ["PATH"].startswith(DRIVER_DIR):
@@ -3508,7 +3507,6 @@ def get_local_driver(
                                 if os.path.exists(LOCAL_UC_DRIVER):
                                     uc_path = LOCAL_UC_DRIVER
                                     uc_path = os.path.realpath(uc_path)
-                                print('check uc_path:', uc_path)
                                 driver = undetected.Chrome(
                                     options=chrome_options,
                                     user_data_dir=user_data_dir,
