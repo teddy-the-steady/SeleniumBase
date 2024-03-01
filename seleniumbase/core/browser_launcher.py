@@ -3518,6 +3518,7 @@ def get_local_driver(
                                     headless=False,  # Xvfb needed!
                                     version_main=uc_chrome_version,
                                     use_subprocess=True,  # Always!
+                                    patch_driver=False
                                 )
                                 uc_activated = True
                             except URLError as e:
