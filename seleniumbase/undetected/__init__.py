@@ -47,7 +47,7 @@ class Chrome(selenium.webdriver.chrome.webdriver.WebDriver):
         enable_cdp_events=False,
         log_level=0,
         headless=False,
-        patch_driver=False,
+        patch_driver=True,
         version_main=None,
         patcher_force_close=False,
         suppress_welcome=True,
